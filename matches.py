@@ -2,13 +2,6 @@
 n = int(input('Write the number of matches the game will have:\n'))
 player = str(input('Would you like to go first? (Y/N)\n')).upper() == 'Y'
 
-# Calcula el residuo de el numero de palillos
-def res(n):
-    r = (n-5) % 4
-    return int(r)
-
-residuo = res(n)
-
 # Palillos que sobran
 matches_left = n
 
