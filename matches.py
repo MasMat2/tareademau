@@ -32,13 +32,8 @@ while matches_left>0:
         for i in range(1,4):
             try_matches = matches_left
             try_matches = try_matches - i
-
-            # Revisar si se recogio el k-esimo termino
-            while try_matches > 5:
-                try_matches = try_matches - 4
-
             # Recoger el k-esimo termino, si no es posible recoger 3 palillos
-            if (try_matches == 5) or (i==3) or (try_matches == 1):
+            if (try_matches % 4 == 1) or (i==3):
                 matches_left = matches_left - i
                 print(f'La computadora recogio {i} palillos')
                 print(f'Quedan {matches_left} palillos\n')
